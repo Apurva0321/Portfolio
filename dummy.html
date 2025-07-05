@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Dummy Portfolio</title>
+  <style>
+    /* Reset & base */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html, body { height:100%; font-family:Helvetica, sans-serif; color:#eee; background:#111; }
+
+    /* Header / Hero */
+    .hero {
+      position: relative;
+      background: url('https://source.unsplash.com/1600x900/?city,night') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+    .hero-content {
+      position: relative;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      font-weight: 300;
+    }
+    .hero-content h2 {
+      font-size: 1.5rem;
+      font-weight: 100;
+    }
+
+    /* Navigation */
+    nav {
+      position: absolute;
+      top:0; left:0;
+      width:100%;
+      padding:1rem 2rem;
+      display:flex;
+      justify-content:flex-end;
+      gap:2rem;
+      z-index:2;
+    }
+    nav a {
+      color:#eee;
+      text-decoration:none;
+      font-weight:300;
+      transition: color .3s;
+    }
+    nav a:hover { color:#fff; }
+
+    /* Section */
+    section {
+      padding:4rem 2rem;
+      max-width:800px;
+      margin:0 auto;
+      line-height:1.6;
+    }
+    section h2 {
+      margin-bottom:1.5rem;
+      font-weight:300;
+      font-size:2rem;
+      position:relative;
+    }
+    section h2::after {
+      content:'';
+      position:absolute;
+      width:50px;
+      height:2px;
+      background:#eee;
+      bottom:-10px;
+      left:0;
+    }
+    section p {
+      margin-bottom:1rem;
+      font-weight:200;
+    }
+
+    /* Footer */
+    footer {
+      text-align:center;
+      padding:2rem;
+      background:#000;
+      font-size:0.9rem;
+      color:#666;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>John Doe</h1>
+      <h2>Designer & Developer</h2>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium ex nec sapien tempor, at cursus.</p>
+      <p>Quisque ultricies justo sit amet tortor convallis, a imperdiet urna blandit. Vivamus suscipit.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Project A – A sleek web app built with HTML, CSS, and JavaScript.</p>
+      <p>Project B – A mobile-first design project using responsive layouts.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: john.doe@example.com</p>
+      <p>Phone: +91-9876543210</p>
+    </section>
+  </main>
+
+  <footer>&copy; 2025 John Doe. All rights reserved.</footer>
+
+</body>
+</html>
